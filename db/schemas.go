@@ -36,6 +36,7 @@ var schemas = []schema{
 			id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 			name VARCHAR(100) NOT NULL,
 			avatar VARCHAR(100) NOT NULL,
+			role  VARCHAR(100) NOT NULL,
 			created DATETIME DEFAULT NOW(),
 			updated DATETIME DEFAULT NOW() ON UPDATE NOW());`,
 	},
