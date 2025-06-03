@@ -52,6 +52,7 @@ func main() {
 	})
 	// define routes
 	routes.ServiceRoutes(e.Group("api/services/"))
+	routes.PortfolioRoutes(e.Group("api/portfolios/"))
 	routes.CommentRoutes(e.Group("api/comments/"))
 	routes.TeamRoutes(e.Group("api/team/"))
 	routes.ContactRoutes(e.Group("api/contact/"))
