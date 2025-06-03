@@ -18,6 +18,17 @@ var schemas = []schema{
 			updated DATETIME DEFAULT NOW() ON UPDATE NOW());`,
 	},
 	{
+		name: "Portfolios",
+		query: `
+			CREATE TABLE IF NOT EXISTS portfolios(
+			id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+			image VARCHAR(100) NOT NULL,
+			title VARCHAR(50) NOT NULL,
+			description TEXT NOT NULL,
+			created DATETIME DEFAULT NOW(),
+			updated DATETIME DEFAULT NOW() ON UPDATE NOW());`,
+	},
+	{
 		name: "Comments",
 		query: `
 			CREATE TABLE IF NOT EXISTS comments(
