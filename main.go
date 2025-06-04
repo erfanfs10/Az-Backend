@@ -7,7 +7,6 @@ import (
 	"github.com/erfanfs10/Az-Backend/utils"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
-	"os"
 	"strings"
 )
 
@@ -43,9 +42,9 @@ func main() {
 	e.Use(middlewares.SeparateLogs())
 	e.Use(middleware.Recover())
 	// serving static files in dev mode
-	if os.Args[len(os.Args)-1] == "dev" {
-		e.Static("media", "../")
-	}
+	//if os.Args[len(os.Args)-1] == "dev" {}
+	e.Static("media", "../")
+
 	// root route
 	e.GET("/", func(c echo.Context) error {
 		return c.String(200, "Az-Lab-Backend")
